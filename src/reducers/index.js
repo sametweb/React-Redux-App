@@ -1,6 +1,7 @@
 import {
   FETCH_COUNTRIES,
   FETCH_COUNTRY,
+  SEARCH_COUNTRY,
   CLEAR_COUNTRY,
   FETCH_DATA_STATUS,
   SWITCH_VIEW_STYLE,
@@ -19,6 +20,7 @@ export const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case FETCH_COUNTRIES:
     case FETCH_COUNTRY:
+    case SEARCH_COUNTRY:
     case CLEAR_COUNTRY:
     case FETCH_DATA_STATUS:
     case SWITCH_VIEW_STYLE:

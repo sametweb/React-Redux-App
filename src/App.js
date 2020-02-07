@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import CountryList from "./components/CountryList";
 import Country from "./components/Country";
+import SearchResults from "./components/SearchResults";
 
 const App = props => {
   useEffect(() => {
@@ -18,7 +19,8 @@ const App = props => {
       <Header />
       <Navigation />
       <Route path="/" exact component={CountryList} />
-      <Route path="/:country" component={Country} />
+      <Route path="/:country" exact component={Country} />
+      <Route path="/search/:search" component={SearchResults} />
     </div>
   );
 };

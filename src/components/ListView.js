@@ -7,7 +7,7 @@ const Flagview = ({ country }) => {
     <div className="country list">
       <Link
         to={{
-          pathname: slugify(country.name),
+          pathname: `/${slugify(country.name)}`,
           state: { countryName: country.name }
         }}
       >

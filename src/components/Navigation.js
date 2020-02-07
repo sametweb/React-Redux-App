@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { switchViewStyle } from "../actions";
+import { switchViewStyle, searchCountry } from "../actions";
+import { withRouter } from "react-router-dom";
+import slugify from "react-slugify";
 
 const Navigation = props => {
   const [term, setTerm] = useState("");
@@ -23,7 +25,13 @@ const Navigation = props => {
           </>
         )}
       </button>
-      <form>
+      <form
+        onSubmit={e => {
+          e.preventDefault();
+          props.history.push(`/search/${slugify(term)}`);
+          setTerm("");
+        }}
+      >
         <input
           placeholder="search countries by name"
           id="search"
@@ -32,7 +40,7 @@ const Navigation = props => {
           value={term}
           onChange={e => setTerm(e.target.value)}
         />
-        <button>
+        <button type="submit">
           <i className="fa fa-search"></i>
         </button>
       </form>
@@ -46,4 +54,6 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { switchViewStyle })(Navigation);
+export default connect(mapStateToProps, { switchViewStyle, searchCountry })(
+  withRouter(Navigation)
+);

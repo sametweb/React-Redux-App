@@ -10,10 +10,6 @@ a {
   color: black;
 }
 
-body {
-  transition: all 0.3s;
-}
-
 .App {
   width: 768px;
   margin: 0 auto;
@@ -48,7 +44,6 @@ body {
         background: white;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
-        transition: all 0.3s;
         &:focus {
           width: 40%;
         }
@@ -110,7 +105,6 @@ body {
         width: 100px;
         border-radius: 10px;
         box-shadow: #ccc 0 0px 7px;
-        transition: all 0.3s;
         &:hover {
           transform: scale(1.2);
         }

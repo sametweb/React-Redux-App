@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.3s;
 }
 
 a {
@@ -11,10 +12,6 @@ a {
 
 body {
   transition: all 0.3s;
-}
-
-.dark {
-  background: #999;
 }
 
 .App {
@@ -39,22 +36,27 @@ body {
     padding: 7px;
     margin: 0 0 20px 0;
     form {
+      width: 80%;
       display: flex;
-      background: white;
+      justify-content: flex-end;
       border-radius: 10px;
       input {
-        width: 100%;
+        width: 30%;
         padding: 0 0 0 10px;
         border: none;
         outline: none;
-        background: inherit;
+        background: white;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
+        transition: all 0.3s;
+        &:focus {
+          width: 40%;
+        }
       }
       button {
         border: none;
         outline: none;
-        background: inherit;
+        background: white;
         padding: 0 7px 0 12px;
         font-size: 18px;
         border-top-right-radius: 10px;
@@ -79,6 +81,12 @@ body {
     i {
       margin: 0 10px;
       font-size: 25px;
+    }
+  }
+
+  .search-results {
+    h2 {
+      margin: 0 0 20px 0;
     }
   }
 
@@ -124,6 +132,7 @@ body {
           width: 40px;
           height: auto;
           margin: 0 10px 0 0;
+          border-radius: 5px;
         }
       }
     }
@@ -180,6 +189,68 @@ body {
           .tag {
             padding: 4px 0;
           }
+        }
+      }
+    }
+  }
+}
+
+.dark {
+  background: #333;
+  color: #e1e1e2;
+  .logo {
+    color: #e1e1e2;
+  }
+  .switch {
+    color: #e1e1e2;
+  }
+  .navigation {
+    background: #222;
+    form {
+      input,
+      button {
+        background: #111;
+        color: #c1c1c2;
+      }
+    }
+  }
+  .countries {
+    .country {
+      img {
+        box-shadow: none;
+      }
+    }
+    .list {
+      border: 1px solid #393939;
+      border-bottom: 1px solid #555;
+      background: #393939;
+      h3 {
+        color: #d1d1d2;
+      }
+      img {
+        box-shadow: none;
+      }
+      &:hover {
+        background: #343434;
+        h3 {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .country {
+    .header {
+      img {
+        box-shadow: none;
+      }
+    }
+    .info {
+      .box {
+        box-shadow: none;
+        border: 1px solid #393939;
+        border-bottom: 1px solid #555;
+        h3 {
+          background: #282828;
         }
       }
     }

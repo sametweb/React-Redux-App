@@ -4,8 +4,6 @@ import FlagView from "./FlagView";
 import ListView from "./ListView";
 
 const CountryList = props => {
-  // console.log(props.countries[1]);
-
   return props.countries && props.status !== "fetching" ? (
     <div className="countries">
       {props.countries.map(country =>

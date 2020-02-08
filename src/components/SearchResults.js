@@ -10,7 +10,7 @@ const SearchResults = props => {
   }, [props.match.params.search]);
 
   return (
-    <div>
+    <div className="search-results">
       <h2>Search results for "{props.match.params.search}"</h2>
       {props.searchResults && props.status !== "fetching" ? (
         <div className="countries">
